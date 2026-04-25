@@ -14,4 +14,28 @@ class MenuItem {
 
     count++;
   }
+
+  public String getCode() {
+    return code;
+  }
+
+  public double getPrice() {
+    return price;
+  }
+
+  public static int getCount() {
+    return count;
+  }
+
+  @Override
+  public String toString() {
+    return name + " (" + code + ") - " + price + " PLN";
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    MenuItem other = (MenuItem) obj;
+    
+    return this.code.equals(other.code);
+  }
 }
